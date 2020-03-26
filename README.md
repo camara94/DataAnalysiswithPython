@@ -182,3 +182,36 @@ Cependant, pandas prend également en charge l'importation et l'exportation de l
 La syntaxe du code pour lire et enregistrer d'autres formats de données est très similaire à la lecture ou à l'enregistrement
 fichier csv.
 Chaque colonne montre une méthode différente pour lire et enregistrer des fichiers dans un format différent.
+
+## Leçon 3
+### Aperçu de l'analyse des données
+* Comprendre vos données avant de commencer toute analyse
+* Devrait vérifier:
+1. les types de vos données
+2. la distribution de vos données
+* Localiser les problèmes potentiels des données
+Certains sont très similaires, comme les types de données numériques **int** et **float**.
+Les fonctions de type **pandas** **objet** similaires à **chaîne** en Python, sauf pour le changement
+dans le nom, alors que le type de **pandas** **datetime**, est un type très utile pour gérer les séries chronologiques(times series) de données.
+* Il y a deux raisons de vérifier les types de données dans un ensemble de données.
+Pandas attribue automatiquement des types en fonction de l'encodage qu'il détecte du
+tableau original de données.
+Pour plusieurs raisons, cette affectation peut être incorrecte.
+par exemple les fonctions mathematiques sont applicables uniquements aux données de types numérique
+**int64**, **float** sinon leurs utilisations génèrent une erreur sur d'autres type de données
+
+* l'attribut **dtype** est appliqué à un dataFrame pour afficher les types de colonnes series<br/>
+<code>df.dtype</code>
+
+* la methode **describe()** est appliquée à un dataFrame afficher la description de ce dataFrame<br/>
+<code>df.describe()</code>
+
+* Pour en savoir plus sur l'utilisation d'une methode ou une fonction ou bien un object
+ il siffut : <code>ob?? ob.methode??  fun??</code><br/>
+ Ex:
+ <code>
+ 	<pre>
+ 		df?? # pour le dataFrame
+ 		df.describe? # pour la methode describe()
+ 	</pre>
+ </code>
